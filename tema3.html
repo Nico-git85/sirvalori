@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css
+"
+      integrity="sha384-
+Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <title>Siruri</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Rezultatele concursului</h2>
+      <p>pentru ocuparea posturilor vacante</p>
+      <br />
+      <h3>Candidați înscriși</h3>
+      <div>
+        <ol>
+          <li>Paul IONESCU</li>
+          <li>Alex PARASCHIV</li>
+        </ol>
+      </div>
+      <br />
+      <h3>Rezultatele concursului</h3>
+      <table class="table table-hover" style="width: 40%;">
+        <thead class="thead-dark">
+          <tr>
+            <th>Nr crt.</th>
+            <th>Numele și prenumele</th>
+            <th>Media</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>IONESCU Paul</td>
+            <td>9.45</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>PARASCHUV Alex</td>
+            <td>8.45</td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      <h3>Lista candidatilor declarati admiși</h3>
+      <p>în ordinea mediilor obținute:</p>
+      <div>
+        <ol>
+          <li>IONESCU Paul</li>
+          <li>PARASCHIV Alex</li>
+        </ol>
+      </div>
+    </div>
+    <script>
+      "use strict";
+      const cursanti = [
+        { id: 1, nume: "Alexandru POPA", gen: "m", medie: 7.35 },
+        { id: 2, nume: "Dragoș ALBU", gen: "m", medie: 6.5 },
+        { id: 3, nume: "Ana GRIGA", gen: "f", medie: 9.28 },
+        { id: 4, nume: "Cristian BARBU", gen: "m", medie: 8.75 },
+        { id: 5, nume: "Elena CRIȘAN", gen: "f", medie: 8.33 },
+        { id: 6, nume: "Marius APOSTOL", gen: "m", medie: 7.06 },
+        { id: 7, nume: "Luciana ZANC", gen: "f", medie: 9.14 },
+      ];
+
+      const cursantiNume = cursanti.map(function (elev) {
+        return `<li> ${elev.nume} </li>`;
+      });
+
+      console.log(cursantiNume);
+
+      //const genuri = cursanti.map(function (alege) {
+      // return `<li> ${alege.gen} </li>`;
+      // });
+      // console.log(genuri);
+      const tabelul = cursanti.map(function (a, b, c) {
+        let j = b + 1;
+        let d = cursanti[3];
+        return `<tr><td>${j} </td><td> ${a.nume}</td><td>${d.medie}</td></tr>`;
+      });
+      console.log(tabelul);
+    </script>
+  </body>
+</html>
